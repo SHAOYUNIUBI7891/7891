@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>奇疆牛逼</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #ffff00;
+            padding: 20px;
+            margin: 0;
+            font-size: 24px;
+            white-space: pre-wrap; /* 保留换行和空格 */
+        }
+        #content {
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div id="content"></div>
+
+    <script>
+        const contentDiv = document.getElementById('content');
+
+        function addJiujiuniubi() {
+            // 追加一行“奇疆牛逼”
+            contentDiv.textContent += '奇疆牛逼   UID:3546862590101858\n';
+
+            // 可选：自动滚动到底部，让你看到最新的一行
+            contentDiv.scrollTop = contentDiv.scrollHeight;
+
+            // 每隔 200 毫秒（0.2秒）调用一次自己 → 形成循环
+            setTimeout(addJiujiuniubi, 200);
+        }
+
+        // 页面加载完成后开始刷屏
+        window.onload = function () {
+            addJiujiuniubi();
+        };
+    </script>
+</body>
+</html>
